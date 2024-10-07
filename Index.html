@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complejo Educativo "Sor Clara Quiroz"</title>
+
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            /* Fondo claro */
+            color: #333;
+        }
+
+       /* Estilos para el header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 4, 255, 0.473);
+    padding: 15px 20px; /* Aumentamos el padding para un mejor espaciado */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+/* Clase para hacer el header transparente */
+.transparent {
+    background-color: rgba(0, 4, 255, 0.473);
+}
+
+/* Logo de la institución */
+.logo img {
+    width: 60px;
+    height: auto;
+}
+
+/* Estilos para el menú de navegación */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Espaciado entre los elementos del menú */
+nav ul li {
+    margin-left: 30px; /* Aumentamos ligeramente el espacio entre los elementos */
+}
+
+/* Estilos para los enlaces del menú */
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 20px; /* Mayor padding para darle más espacio a los enlaces */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efecto hover en los enlaces */
+nav ul li a:hover {
+    background-color: #ffcc00;
+    color: #0044cc;
+    border-radius: 4px;
+}
+
+
+        /* Estilos para el menú de navegación */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            padding: 8px 14px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffcc00;
+            /* Amarillo al hacer hover */
+            color: #0044cc;
+            /* Cambia a azul oscuro */
+            border-radius: 4px;
+        }
+
+        /* Sección HERO */
+
+        .hero {
+            background-image: url('images/fondo_educacion.jpg');
+            /* Asegúrate de que la ruta es correcta */
+            background-size: cover;
+            /* La imagen cubrirá el contenedor */
+            background-position: center;
+            /* Centrar la imagen */
+            background-repeat: no-repeat;
+            /* Evitar que la imagen se repita */
+            position: relative;
+            height: 70vh;
+            /* Ajusta el tamaño de la sección HERO */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            margin-top: 38px;
+            /* Para evitar que el contenido quede detrás del navbar */
+        }
+
+
+        .hero {
+            background-image: url('IMG_1259.jpg');
+            /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* Sombra negra con 50% de opacidad */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #ffcc00;
+            /* Amarillo */
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .cta-btn {
+            background-color: #ffcc00;
+            color: #0044cc;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #e6b800;
+        }
+
+        /* Sección general */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #fff;
+            margin: 30px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #0044cc;
+            /* Azul oscuro */
+        }
+
+        section p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+         /* Sección con imágenes */
+         #sobre-nosotros {/* Imagen de fondo de la sección */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        #sobre-nosotros::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5);
+            z-index: 1;
+        }
+
+        #sobre-nosotros * {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Estilos para Misión, Visión, Valores */
+        #mision-vision-valores {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 40px;
+            text-align: left;
+        }
+
+        #mision-vision-valores div {
+            flex: 1;
+            min-width: 300px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        #mision-vision-valores h2 {
+            font-size: 1.8em;
+            color: #0044cc;
+            margin-bottom: 15px;
+        }
+
+        /* Sección Historia */
+        #historia {
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        #historia::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5);
+            z-index: 1;
+        }
+
+        #historia * {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Sección Aliados */
+        #aliados ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        #aliados ul li {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+            text-align: center;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .cta-btn {
+                font-size: 1em;
+                padding: 12px 24px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <!-- Logo de la institución -->
+        <div class="logo">
+            <img src="sor clara quiroz 2.jpg" alt="Logo Institución Educativa">
+        </div>
+
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+                <li><a href="Eventos.html">Eventos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección HERO -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Complejo Educativo "Sor Clara Quiroz"</h1>
+            <p>Nos comprometemos a brindar una educación de calidad, formando estudiantes íntegros y preparados para el
+                futuro. Descubre nuestros programas académicos y forma parte de nuestra comunidad educativa.</p>
+            <a href="Contacto.html" class="cta-btn">Contáctanos</a>
+        </div>
+    </section>
+
+    <section id="sobre-nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>El Complejo Educativo "Sor Clara Quiroz" ha estado al servicio de la comunidad por más de 50 años,
+            proporcionando educación de calidad en todos los niveles educativos. Nuestro objetivo es formar ciudadanos
+            responsables y preparados para enfrentar los retos del futuro.</p>
+        <p>Nuestros valores incluyen la responsabilidad, el respeto y el compromiso con la excelencia académica.</p>
+    </section>
+    
+    <!-- Nueva Sección: Misión, Visión y Valores -->
+    <section id="mision-vision-valores" style="padding: 60px 20px; text-align: center; background-color: #f9f9f9; margin-top: 30px;">
+        <div>
+            <h2>Nuestra Misión</h2>
+            <p>Brindar una educación integral que forme personas competentes, críticas y comprometidas con el desarrollo
+                social, moral y académico, a través de una enseñanza de calidad y el desarrollo de valores humanos.</p>
+        </div>
+    
+        <div>
+            <h2>Nuestra Visión</h2>
+            <p>Ser una institución educativa de referencia nacional, reconocida por su excelencia académica y el compromiso
+                con el desarrollo integral de los estudiantes, preparándolos para enfrentar los desafíos del mundo
+                contemporáneo.</p>
+        </div>
+    
+        <div>
+            <h2>Nuestros Valores</h2>
+            <ul style="list-style-type: none; padding: 0;">
+                <li><strong>Responsabilidad:</strong> Cumplir con los deberes y compromisos, tanto académicos como sociales.</li>
+                <li><strong>Respeto:</strong> Valorar y reconocer la dignidad de las personas y su entorno.</li>
+                <li><strong>Compromiso:</strong> Mantener una dedicación constante hacia la excelencia.</li>
+                <li><strong>Solidaridad:</strong> Fomentar la ayuda mutua y la empatía con los demás.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Nueva Sección: Historia -->
+    <section id="historia" style="padding: 60px 20px; background-color: #ffffff; text-align: center;">
+        <h2>Nuestra Historia</h2>
+        <p>El Complejo Educativo "Sor Clara Quiroz" fue fundado en 1970 por un grupo de educadores comprometidos con la
+            mejora de la educación en nuestra comunidad. A lo largo de las décadas, la institución ha crecido en tamaño y
+            prestigio, logrando formar a miles de estudiantes que hoy en día se desempeñan exitosamente en diferentes
+            áreas.</p>
+        <p>Nos hemos adaptado a los cambios sociales y tecnológicos para mantener la relevancia de nuestros programas
+            académicos, integrando las últimas tendencias educativas para preparar a nuestros alumnos para el futuro.</p>
+    </section>
+    
+    <!-- Nueva Sección: Aliados -->
+    <section id="aliados" style="padding: 60px 20px; text-align: center; background-color: #f4f4f9;">
+        <h2>Nuestros Aliados</h2>
+        <p>El Complejo Educativo "Sor Clara Quiroz" trabaja en colaboración con diversas instituciones educativas y
+            organizaciones que comparten nuestra misión de formar ciudadanos responsables y preparados.</p>
+        <ul style="list-style-type: none; padding: 0;">
+            <li><strong>Ministerio de Educación:</strong> Implementación de programas educativos nacionales.</li>
+            <li><strong>Asociación de Padres:</strong> Trabajo conjunto con los padres de familia para mejorar el ambiente escolar.</li>
+        </ul>
+    </section>   
+    
+</body>
+
+
+</html>
